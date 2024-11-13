@@ -1,0 +1,6 @@
+<h2>Your Appointments</h2>
+<ul>
+    {% for appointment in appointments %}
+        <li>Appointment with Dr. {{ appointment.doctor.username }} on {{ appointment.date }}</li>
+    {% endfor %}
+</ul>
