@@ -1,0 +1,6 @@
+<h2>Medical Records</h2>
+<ul>
+    {% for record in records %}
+        <li>{{ record.diagnosis }} - {{ record.prescription }} (by Dr. {{ record.doctor.username }})</li>
+    {% endfor %}
+</ul>
