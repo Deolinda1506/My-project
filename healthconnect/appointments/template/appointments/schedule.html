@@ -1,0 +1,13 @@
+<h2>Schedule an Appointment</h2>
+<form method="post">
+    {% csrf_token %}
+    <label for="doctor">Select Doctor:</label>
+    <select name="doctor_id">
+        {% for doctor in doctors %}
+            <option value="{{ doctor.id }}">{{ doctor.username }}</option>
+        {% endfor %}
+    </select>
+    <label for="date">Date:</label>
+    <input type="datetime-local" name="date">
+    <button type="submit">Schedule</button>
+</form>
